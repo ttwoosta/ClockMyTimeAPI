@@ -3,7 +3,7 @@ Routes and views for the flask application.
 """
 
 from datetime import datetime
-from flask import render_template
+from flask import render_template, jsonify
 from ClockMyTimeAPI import app
 
 @app.route('/')
@@ -35,3 +35,12 @@ def about():
         year=datetime.now().year,
         message='Your application description page.'
     )
+
+@app.route('/me')
+def me_api():
+    user = {
+        "username": "my_name",
+        "full_name": "My Full Name"
+    }
+    resp = jsonify(user)
+    return resp

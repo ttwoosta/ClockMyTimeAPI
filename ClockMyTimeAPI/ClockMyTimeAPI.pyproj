@@ -18,6 +18,10 @@
     <Name>ClockMyTimeAPI</Name>
     <RootNamespace>ClockMyTimeAPI</RootNamespace>
     <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+    <Environment>
+    </Environment>
+    <WebBrowserPort>5001</WebBrowserPort>
+    <PythonDebugWebServerCommandEnvironment>FLASK_ENV=development</PythonDebugWebServerCommandEnvironment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
